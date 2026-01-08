@@ -1,74 +1,115 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-body {
-  margin: 0;
-  font-family: 'Segoe UI', system-ui, sans-serif;
-  background: linear-gradient(120deg, #0f172a, #020617);
-  color: #e5e7eb;
-}
-
-header {
-  padding: 20px;
-  font-size: 24px;
-  font-weight: 700;
-}
-
-.container {
-  padding: 30px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-}
-
-.tool-card {
-  background: rgba(255,255,255,0.05);
-  border-radius: 14px;
-  padding: 20px;
-  text-align: center;
-  transition: 0.25s;
-  cursor: pointer;
-}
-
-.tool-card:hover {
-  transform: translateY(-5px);
-  background: rgba(255,255,255,0.1);
-}
-
-.tool-icon {
-  font-size: 40px;
-  margin-bottom: 10px;
-}
-</style>  <title>OmniTools</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OmniTools</title>
+
+  <!-- Animated Gradient Background & Modern UI -->
+  <style>
+    /* Body & Animated Gradient */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: linear-gradient(-45deg, #ff6ec4, #7873f5, #42e695, #f5a623);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: #fff;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Header */
+    header {
+      padding: 30px;
+      font-size: 28px;
+      font-weight: 800;
+      text-align: center;
+      text-shadow: 1px 1px 10px rgba(0,0,0,0.5);
+    }
+
+    /* Tool cards container */
+    .container {
+      padding: 30px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    /* Individual Tool Card */
+    .tool-card {
+      background: rgba(255,255,255,0.05);
+      border-radius: 18px;
+      padding: 25px;
+      text-align: center;
+      transition: 0.35s;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      backdrop-filter: blur(6px);
+    }
+
+    .tool-card:hover {
+      transform: translateY(-8px);
+      background: rgba(255,255,255,0.12);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    }
+
+    /* Icon inside card */
+    .tool-icon {
+      font-size: 48px;
+      margin-bottom: 12px;
+    }
+
+    /* Tool title text */
+    .tool-title {
+      font-size: 18px;
+      font-weight: 600;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+    }
+
+    /* Responsive adjustments */
+    @media(max-width: 500px) {
+      .tool-card {
+        padding: 18px;
+      }
+      .tool-icon {
+        font-size: 36px;
+      }
+    }
+  </style>
 </head>
+
 <body>
+  <!-- Header -->
   <header>⚙️ OmniTools</header>
 
-<div class="container">
+  <!-- Tools Grid -->
+  <div class="container">
+    <a href="tools/video/m3u8.html" class="tool-card">
+      <div class="tool-icon">🎬</div>
+      <div class="tool-title">M3U8 to MP4</div>
+    </a>
 
-  <a href="tools/m3u8.html" class="tool-card">
-    <div class="tool-icon">🎬</div>
-    <div>M3U8 to MP4</div>
-  </a>
+    <a href="#" class="tool-card">
+      <div class="tool-icon">📄</div>
+      <div class="tool-title">PDF Merger</div>
+    </a>
 
-  <div class="tool-card">
-    <div class="tool-icon">📄</div>
-    <div>PDF Merger</div>
+    <a href="#" class="tool-card">
+      <div class="tool-icon">🧠</div>
+      <div class="tool-title">AI Tools</div>
+    </a>
+
+    <a href="#" class="tool-card">
+      <div class="tool-icon">🔁</div>
+      <div class="tool-title">Converters</div>
+    </a>
   </div>
-
-  <div class="tool-card">
-    <div class="tool-icon">🧠</div>
-    <div>AI Tools</div>
-  </div>
-
-  <div class="tool-card">
-    <div class="tool-icon">🔁</div>
-    <div>Converters</div>
-  </div>
-
-</div>
 </body>
 </html>
