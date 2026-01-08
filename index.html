@@ -1,13 +1,74 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>OmniTools</title>
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: linear-gradient(120deg, #0f172a, #020617);
+  color: #e5e7eb;
+}
+
+header {
+  padding: 20px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.container {
+  padding: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.tool-card {
+  background: rgba(255,255,255,0.05);
+  border-radius: 14px;
+  padding: 20px;
+  text-align: center;
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+.tool-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255,255,255,0.1);
+}
+
+.tool-icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+</style>  <title>OmniTools</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-  <h1>Welcome to OmniTools</h1>
-  <p>All-in-one online tools platform</p>
-  <a href="omni.html">Go to OmniTools Hub</a>
+  <header>⚙️ OmniTools</header>
+
+<div class="container">
+
+  <a href="tools/m3u8.html" class="tool-card">
+    <div class="tool-icon">🎬</div>
+    <div>M3U8 to MP4</div>
+  </a>
+
+  <div class="tool-card">
+    <div class="tool-icon">📄</div>
+    <div>PDF Merger</div>
+  </div>
+
+  <div class="tool-card">
+    <div class="tool-icon">🧠</div>
+    <div>AI Tools</div>
+  </div>
+
+  <div class="tool-card">
+    <div class="tool-icon">🔁</div>
+    <div>Converters</div>
+  </div>
+
+</div>
 </body>
 </html>
